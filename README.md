@@ -2,92 +2,91 @@
 
 # PROJECT H1 HEALTH INSURANCE
 
-H1 Health insurance is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
-This project focuses on analyzing healthcare insurance data to uncover how personal attributes and geographic factors impact insurance costs. By developing predictive models, the goal is to estimate healthcare expenses and generate data-driven insights to support more accurate forecasting of insurance charges.
+* H1 Health insurance is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for novice and expert data scientists.
+* This project analyses healthcare insurance data to uncover how personal attributes and geographic factors impact insurance costs. By developing predictive models, the goal is to estimate healthcare expenses and generate data-driven insights to support more accurate forecasting of insurance charges.
+
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 
 ## Dataset Content
-The dataset provides information on personal characteristics (including age, gender, BMI, family size, and smoking status) and geographic factors, examining their effect on medical insurance charges. It serves as a resource for analyzing the impact of these variables on insurance costs and for building predictive tools to estimate healthcare expenses.
+The dataset provides information on personal characteristics (including age, gender, BMI, family size, and smoking status) and geographic factors, examining their effect on medical insurance charges. It serves as a resource for analysing the impact of these variables on insurance costs and for building predictive tools to estimate healthcare expenses.
 
 
 ## Business Requirements
-* Describe your business requirements
+Deliver insights and predictive reports to estimate healthcare insurance costs based on individual and geographic characteristics.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+Descriptive Statistics: Show fundamental statistics such as average insurance charges by age, gender, and region.
+
+Correlation Analysis: Visualise the strength and direction of relationships between various attributes and insurance charges.
+
+Predictive Analysis: Build and display models to forecast insurance expenses.
+
+Geographic Analysis: Illustrate how regional differences impact insurance costs.
+
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+* Set up the project dashboard and tasks 
+* Extract: Load data from the provided CSV file.
+* Transform: Clean the data, handle missing values, encode categorical variables, and create new features such as body mass index (BMI) categories.
+* Load: Store the transformed data in a format suitable for analysis (e.g., a cleaned DataFrame).
+* Visualise data as per business requirements.
+* Create project documentation as required.
+* Proofread and review all elements of the projects before loading/sharing them.
+* Push the final version within the given timeframe.
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+* Descriptive statistics like averages, medians, and standard deviations can reveal important insights into how different groups (age, gender, region) are impacted by insurance charges. Visualisations like bar charts can show average charges across different age groups, genders, or regions.
+* Correlation Analysis: Visualise Correlations between different attributes and Insurance Charges: Visualisations such as heatmaps can display correlation matrices, making it easy to spot strong relationships. Correlation analysis helps identify which variables have the strongest positive or negative relationships with insurance charges.
+* Predictive Analysis: Develop and Visualise Predictive Reports for Estimating Insurance Costs. Predictive models such as regression or machine learning algorithms can be used to estimate insurance costs based on multiple features. Visualisations like scatter plots with regression lines can show predicted versus actual insurance charges.
+
 
 ## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* Data analysis methods used: Descriptive analysis, Correlation analysis, Predictive analysis and Geographical analysis.
+* Structure of the data analysis techniques. 
+    *Data Exploration: Understand the dataset, detect issues early
+    *Data Cleaning & Preprocessing: Ensure reliable, accurate analysis and modelling
+    *Descriptive Statistics: Identify basic patterns and segment-wise trends
+    *Correlation Analysis: Discover key influencers of insurance charges
+    *Predictive Modelling: Estimate insurance costs and enable forecasting
+    *Geographic Analysis: Explore regional impact on costs and support targeted decision-making
+
+* The data is very limited, and in a real-life scenario, I will try to acquire more information, such as: current health condition and medical history, other lifestyle attributes than smoking, such as: drinking, drugs, active/sedentary, etc. Lack of Time-series Data: The dataset does not include time-series information (e.g., insurance charges over time), limiting our ability to perform longitudinal analyses or trend forecasting.
+    * Approach: The analysis is adapted to fit the scope of the dataset, focusing on relationships between personal attributes and insurance charges, and using appropriate visualisations to provide actionable insights. Instead of time-series data, I focused on analysing the relationships between features (such as BMI, age, and smoking habits) and insurance charges at a single point in time. These steps ensured that the business requirements were still met, despite the data limitations. For predictive modelling, I built models based on personal and geographic features, without incorporating time-dependent changes.
+* Generative AI tools like CoPilot and ChatGPT have been used for code smart suggestions/error correction as well as optimising and text rephrasing and formatting for documentation.   
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+* The data has already been anonymised and there are no privacy risks to be considered. As the BMI is the only health-related attribute, and is limited to yes or no on smoking habits, the results can be potentially biased.
+* There are no legal challenges in processing the data. A disclaimer regarding limited data and potential bias, it is still recommended.
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* Syntax is the most common error, and generative AI is quite helpful in VS Code, generating suggestions and predictive commands.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
-
-## Deployment
-### Heroku
-
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+* Being the first project, the major challenge is to deliver all KPIs timely, and as required.
 
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* Pandas- Purpose: Data loading, cleaning, and manipulation.
+* NumPy- Purpose: Numerical operations and array handling.
+* Matplotlib & Seaborn, Plotly- Purpose: Data visualisation to explore relationships between variables.
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* Code Institute https://learn.codeinstitute.net/ and GitHub: https://github.com/Code-Institute-Solutions/da-README-template, https://github.com/Code-Institute-Org/data-analytics-template
+* CoPilot for code correction and predictive suggestions
+* ChatGPT for text rephrasing and visualisation optimisation: egz but not limited to: compiling sets of multiple charts.
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The data set is from https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance 
+- Instructions and project templates are from: Code Institute https://learn.codeinstitute.net/ and GitHub: https://github.com/Code-Institute-Solutions/da-README-template, https://github.com/Code-Institute-Org/data-analytics-template
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
 
 
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+* Really appreciated the support and guidance from my tutors, coordinators and colleagues. Thank you!
